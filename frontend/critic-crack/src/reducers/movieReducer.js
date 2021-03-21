@@ -7,9 +7,9 @@ export default function movieReducer(state = initialState, action) {
         case "ADD_MOVIE_SUCCESS":
             return {
                 ...state,
-                movies: [...state.movies, action.movie]
+                movies: [...state.movies, action.movie, action.ADD_MOVIE_SUCCESS]
             };
-        case "FETCH_MOVIE_SUCCESS":
+        case "FETCH_MOVIES_SUCCESS":
             return {
                 ...state,
                 movies: action.movies

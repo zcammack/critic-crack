@@ -13,7 +13,8 @@ export class HomePage extends Component {
         const menuStyle = {
             color: "black",
             textAlign: "center",
-            fontFamily: "Times New Roman"
+            fontFamily: "Times New Roman",
+            fontWeight: "bold"
         };
 
         const buttonStyle = {

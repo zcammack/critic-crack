@@ -5,10 +5,10 @@ import { connect } from 'react-redux';
 
 export class MoviesIndex extends Component {
     render() {
-       
     return (
         <div>
             <h1>All Movies</h1>
+            {console.log(this)}
             <MoviesComponent movies={this.props.movies}/>
             <Link to="/movies-new">Add A New Movie</Link>
         </div>

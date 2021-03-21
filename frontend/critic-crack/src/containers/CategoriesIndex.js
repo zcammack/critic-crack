@@ -18,4 +18,4 @@ const mapStateToProps = state => {
     return { categories: state.categoryReducer.categories }
 };
 
-export default connect(mapStateToProps)(CategoriesComponent);
+export default connect(mapStateToProps)(CategoriesIndex);
