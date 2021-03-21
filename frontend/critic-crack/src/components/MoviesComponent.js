@@ -22,3 +22,5 @@ class MoviesComponent extends Component {
         );
     }
 }
+
+export default MoviesComponent;

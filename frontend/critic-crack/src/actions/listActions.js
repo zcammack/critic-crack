@@ -1,4 +1,4 @@
-import { loadCategorie, loadCategories } from "./categoryActions"
+import { loadCategories } from "./categoryActions"
 export const ADD_MOVIE_SUCCESS = "ADD_MOVIE_SUCCESS";
 export const ADD_MOVIE_ERROR = "ADD_MOVIE_ERROR";
 export const FETCH_MOVIES_START = "FETCH_MOVIES_START";
@@ -34,11 +34,11 @@ export function fetchMoviesSuccess(movies) {
 
 export function addMovie(movie) {
     return function(dispatch) {
-        const body = JSON.stringify({ activity });
+        const body = JSON.stringify({ movie });
         const headers = {
             "Content-Type": "application/json"
         };
-        fetch("/movies", { method: "POST", body, headers })
+        fetch("http://localhost:3000/movies", { method: "POST", body, headers })
             .then(response => response.json())
             .then(movie => {
                 dispatch(addMovieSuccess(movie));
@@ -52,7 +52,7 @@ export function addMovie(movie) {
 export function loadMovies() {
     return function(dispatch) {
         dispatch({ type: FETCH_MOVIES_START });
-        fetch("/movies")
+        fetch("http://localhost:3000/movies")
             .then(response => response.json())
             .then(movies => {
                 dispatch({

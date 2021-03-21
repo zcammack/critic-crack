@@ -20,3 +20,5 @@ class CategoriesComponent extends Component {
         return <ul>{this.renderCategories()}</ul>;
     }
 }
+
+export default CategoriesComponent;
