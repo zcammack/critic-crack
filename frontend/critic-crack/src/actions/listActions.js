@@ -38,7 +38,7 @@ export function addMovie(movie) {
         const headers = {
             "Content-Type": "application/json"
         };
-        fetch("http://localhost:3000/movies", { method: "POST", body, headers })
+        fetch("http://localhost:3001/movies", { method: "POST", body, headers })
             .then(response => response.json())
             .then(movie => {
                 dispatch(addMovieSuccess(movie));
@@ -52,7 +52,7 @@ export function addMovie(movie) {
 export function loadMovies() {
     return function(dispatch) {
         dispatch({ type: FETCH_MOVIES_START });
-        fetch("http://localhost:3000/movies")
+        fetch("http://localhost:3001/movies")
             .then(response => response.json())
             .then(movies => {
                 dispatch({

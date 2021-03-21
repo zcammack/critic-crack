@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 
 class MoviesComponent extends Component {
     renderMovies = () => {
-        return this.props.activities.map((activity, idx) => {
-            const url = '/activities/' + activity.id;
+        return this.props.movies.map((movie, idx) => {
+            const url = '/movies/' + movie.id;
 
             return (
                 <li key={idx} >
-                    <Link to={url} className="App-link">{activity.name}</Link>
+                    <Link to={url} className="App-link">{movie.name}</Link>
                 </li>
             );
         });

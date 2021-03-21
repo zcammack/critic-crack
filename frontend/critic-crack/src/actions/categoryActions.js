@@ -7,7 +7,7 @@ export const FETCH_CATEGORIES_ERROR = "FETCH_CATEGORIES_ERROR";
 export function loadCategories() {
   return function(dispatch) {
     dispatch({ type: FETCH_CATEGORIES_START });
-    fetch("http://localhost:3000/categories")
+    fetch("http://localhost:3001/categories")
       .then(resp => resp.json())
         .then(categories => {
         dispatch({
@@ -30,7 +30,7 @@ export function addCategory(category) {
     const headers = {
       "Content-Type": "application/json"
     };
-    fetch("http://localhost:3000/categories", { method: "POST", body, headers })
+    fetch("http://localhost:3001/categories", { method: "POST", body, headers })
       .then(resp => resp.json())
       .then(category => {
         dispatch(addCategorySuccess(category));
