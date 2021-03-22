@@ -10,7 +10,7 @@ class CategoriesComponent extends Component {
             return (
             <div key={category.id}>
                 <Link to={url}>
-                    <Button variant="outline-dark">{category.title}</Button>
+                    <Button variant="dark" size="lg">{category.title}</Button>
                 </Link>
             </div>
             );

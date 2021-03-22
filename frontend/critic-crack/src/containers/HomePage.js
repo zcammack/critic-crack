@@ -18,7 +18,7 @@ export class HomePage extends Component {
         };
 
         const buttonStyle = {
-            textAlign: "center"
+            textAlign: "left"
         };
 
         const sectionStyle = {

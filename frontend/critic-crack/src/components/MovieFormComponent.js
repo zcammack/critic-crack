@@ -82,7 +82,7 @@ class MovieFormComponent extends Component {
                         min="1"
                         max="10"
                         value={this.state.rating}
-                        placeholder="1"
+                        placeholder="1-10"
                         onChange={this.handleRatingChange}
                     />
 
