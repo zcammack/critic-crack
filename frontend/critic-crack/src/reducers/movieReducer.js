@@ -1,5 +1,6 @@
 export const initialState = {
-    movies: []
+    movies: [],
+    requesting: false
 };
 
 export default function movieReducer(state = initialState, action) {
@@ -7,12 +8,14 @@ export default function movieReducer(state = initialState, action) {
         case "ADD_MOVIE_SUCCESS":
             return {
                 ...state,
-                movies: [...state.movies, action.movie, action.ADD_MOVIE_SUCCESS]
+                movies: [...state.movies],
+                requesting: true
             };
         case "FETCH_MOVIES_SUCCESS":
             return {
                 ...state,
-                movies: action.movies
+                movies: action.movies,
+                requesting: false
             };
         default:
             return state;

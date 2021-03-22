@@ -37,8 +37,14 @@ class MovieFormComponent extends Component {
         });
     };
 
-    handleOnSubmit = event => {
+    handleCategoryChange = event => {
         event.preventDefault();
+        this.setState({
+          category_id: event.target.value
+        });
+      };
+
+    handleOnSubmit = event => {
         this.props.addMovie(this.state);
         this.setState({
             name: "",

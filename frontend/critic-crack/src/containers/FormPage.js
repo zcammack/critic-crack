@@ -24,7 +24,6 @@ export class FormPage extends Component {
 
         return (
             <div style={sectionStyle}>
-                {console.log(this)}
                 <MoviesComponent category={id} movies={this.props.movies}/>
                 <hr></hr>
                 <MovieFormComponent addMovie={this.props.addMovie} categories={this.props.categories}/>

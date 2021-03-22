@@ -6,16 +6,15 @@ export const FETCH_MOVIES_SUCCESS = "FETCH_MOVIES_SUCCESS";
 export const FECTH_MOVIES_ERROR = "FETCH_MOVIES_ERROR";
 
 export function loadMovies() {
-    return function(dispatch) {
-        dispatch({ type: FETCH_MOVIES_START });
+    return (dispatch) => {
+        dispatch({ type: 'FETCH_MOVIES_START' });
         fetch("http://localhost:3001/movies")
             .then(response => response.json())
-            .then(movies => {
+            .then(movies => 
                 dispatch({
-                    type: FETCH_MOVIES_SUCCESS,
+                    type: 'FETCH_MOVIES_SUCCESS',
                     movies
-                });
-            })
+                }))
             .catch(error => {
                 dispatch({
                     type: FECTH_MOVIES_ERROR,
